@@ -25,7 +25,7 @@ const PublicChat = ({ socket, userName, chooseChat,chatName }: props) => {
   useEffect(() => {
       socket.emit(
         "fetch_msgs",
-        JSON.stringify({ chatName:0 })
+        JSON.stringify({ index:0 })
       );
   if(socket.listeners("public_msgs").length!==0){
     socket.removeListener('public_msgs')}
