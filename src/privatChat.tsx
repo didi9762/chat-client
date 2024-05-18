@@ -17,7 +17,7 @@ const PrivatChat = ({ chatName, socket, userName }: props) => {
   useEffect(() => {
       socket.emit(
         "fetch_msgs",
-        JSON.stringify( {chatName: chatName })
+        JSON.stringify({index:0, chatName: chatName })
       );
     if (socket.listeners("privat_msgs").length !== 0) {
       socket.removeListener("public_msgs")}
