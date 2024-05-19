@@ -43,7 +43,7 @@ function App() {
           <IconButton onClick={handleLogin}><LoginIcon/></IconButton>
         </Box>
       )}
-      {socket&&userName ? <MainPage socket={socket} userName={userName} /> : null}
+      {socket?.connected&&userName ? <MainPage socket={socket} userName={userName} /> : null}
     </Container>
   );
 }

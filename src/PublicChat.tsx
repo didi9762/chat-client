@@ -168,7 +168,7 @@ const PublicChat = ({ socket, userName, chooseChat,chatName }: props) => {
             );
           })
         : null}
-      <Box sx={{ ml: "40%" }}>
+      <Box sx={{ position: "fixed", bottom: 0, left: "40%", right: 0, mb: 3 }}>
         <TextField
           onChange={handleMessageChange}
           value={messageText}
